@@ -1,0 +1,16 @@
+<div class="container m-auto mt-3">
+<h2>You asked</h2>
+  <div class="alert alert-light" role="alert">
+    <%= @question%>
+    - You posted on: <%= Date.today%>
+  </div>
+  <div class="alert alert-info" role="alert">
+    <%= @answer%>
+    - Stupid Coach posted on: <%= Date.today%>
+  </div>
+
+<form action="/answer" data-turbo="false" method="get">
+  <input type="text" name="question">
+  <input type="submit" value="Ask again!">
+</form>
+</div>
